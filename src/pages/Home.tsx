@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import { Movie, TvShow, Genre, tmdbService } from '../services/tmdb';
 import HorizontalSlider from '../components/HorizontalSlider';
 import {
-  Play, Info, Tv, Zap, Clock, Trophy, ChevronLeft, ChevronRight,
-  Film, Sparkles, Star, Flame, Clapperboard
+  Play, Info, Tv, Clock, Trophy, ChevronLeft, ChevronRight,
+  Sparkles, Star, Flame, Clapperboard
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useWatchlist } from '../context/WatchlistContext';
