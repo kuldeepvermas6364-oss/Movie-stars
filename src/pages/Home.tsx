@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Movie, TvShow, tmdbService } from '../services/tmdb';
 import HorizontalSlider from '../components/HorizontalSlider';
-import { Play, Info, Tv, Zap, Clock } from 'lucide-react';
+import { Play, Info, Tv, Zap, Clock, Trophy } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useWatchlist } from '../context/WatchlistContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -81,6 +81,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/35 to-black/15 md:bg-gradient-to-r md:from-brand-bg md:via-brand-bg/55 md:to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-black/25 md:bg-gradient-to-t md:from-brand-bg/70 md:via-transparent md:to-transparent" />
+
+          <Link to="/leaderboard" aria-label="Open leaderboard" className="absolute right-4 top-4 md:right-8 md:top-8 z-20 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/55 px-3.5 py-2.5 text-xs md:text-sm font-bold text-white shadow-xl backdrop-blur-xl transition hover:border-brand-primary/60 hover:bg-brand-primary/20"><Trophy className="h-4 w-4 text-yellow-400" /><span>Leaderboard</span></Link>
 
           <div className="absolute inset-0 flex flex-col justify-end p-5 pb-8 sm:p-7 md:p-12 md:pb-14 z-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl space-y-3 md:space-y-6">
