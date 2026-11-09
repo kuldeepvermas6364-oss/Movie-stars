@@ -11,6 +11,7 @@ import Collection from './pages/Collection';
 import Watchlist from './pages/Watchlist';
 import History from './pages/History';
 import Stats from './pages/Stats';
+import Leaderboard from './pages/Leaderboard';
 import Person from './pages/Person';
 import { WatchlistProvider } from './context/WatchlistContext';
 
@@ -54,6 +55,7 @@ const router = createBrowserRouter([
       { path: '/watchlist',    element: <Watchlist /> },
       { path: '/history',      element: <History /> },
       { path: '/stats',        element: <Stats /> },
+      { path: '/leaderboard',  element: <Leaderboard /> },
       { path: '/movie/:id',    element: <MovieDetail /> },
       { path: '/tv/:id',       element: <TvDetail /> },
       { path: '/person/:id',   element: <Person /> },
