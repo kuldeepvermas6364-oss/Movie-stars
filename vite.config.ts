@@ -6,7 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: mode === 'production' ? '/vidsrc-wrapper/' : '/',
+    // GitHub Pages is hosted under /vidsrc-wrapper/, while Vercel serves from the domain root.
+    base: process.env.VERCEL === '1' ? '/' : mode === 'production' ? '/vidsrc-wrapper/' : '/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
