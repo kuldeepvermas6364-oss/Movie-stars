@@ -11,7 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import DecisionModal from '../components/DecisionModal';
 
 interface MovieClip {
-  id: number;
+  id: string;
   movieTitle: string;
   movieId: number;
   key: string;
